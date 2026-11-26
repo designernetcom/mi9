@@ -1,0 +1,455 @@
+/* =====================================================
+   CONTACT HERO
+===================================================== */
+
+.mi9-contact-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      circle at 82% 35%,
+      rgba(237, 50, 55, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(circle at 20% 80%, rgba(23, 75, 56, 0.15), transparent 32%),
+    #123c2d;
+}
+
+.mi9-contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 45%),
+    radial-gradient(
+      circle at 65% 45%,
+      rgba(255, 255, 255, 0.07),
+      transparent 25%
+    );
+}
+
+.mi9-contact-grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.09;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 55px 55px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 35%,
+    black 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 35%,
+    black 80%,
+    transparent
+  );
+}
+
+/* Decorative orbit circles */
+
+.mi9-contact-orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mi9-contact-orbit.orbit-a {
+  width: 500px;
+  height: 500px;
+  right: -90px;
+  top: -80px;
+}
+
+.mi9-contact-orbit.orbit-b {
+  width: 650px;
+  height: 650px;
+  right: -165px;
+  top: -155px;
+  border-style: dashed;
+  opacity: 0.55;
+}
+
+.mi9-contact-floating-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ed3237;
+  box-shadow: 0 0 0 7px rgba(237, 50, 55, 0.08);
+  pointer-events: none;
+}
+
+.mi9-contact-floating-dot.dot-one {
+  top: 22%;
+  right: 24%;
+}
+
+.mi9-contact-floating-dot.dot-two {
+  top: 67%;
+  right: 8%;
+  width: 5px;
+  height: 5px;
+}
+
+.mi9-contact-floating-dot.dot-three {
+  bottom: 18%;
+  left: 43%;
+  width: 4px;
+  height: 4px;
+}
+
+/* Hero content layout */
+
+.mi9-contact-hero .mi9-contact-hero-wrap {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.mi9-contact-hero-content {
+  max-width: 700px;
+}
+
+.mi9-contact-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 20px;
+  color: #ed3237;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.mi9-contact-eyebrow > span {
+  display: inline-block;
+  width: 35px;
+  height: 2px;
+  flex: 0 0 35px;
+  background: #ed3237;
+}
+
+.mi9-contact-hero .mi9-contact-hero-content h1 {
+  max-width: 720px;
+  margin: 0;
+  color: #fffdf7;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.mi9-contact-hero .mi9-contact-hero-content h1 em {
+  display: block;
+  color: #ed3237;
+  font-style: normal;
+}
+
+.mi9-contact-hero-content > p {
+  max-width: 600px;
+  margin: 27px 0 0;
+  color: rgba(255, 253, 247, 0.72);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.mi9-contact-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.mi9-contact-hero-pills > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Global visual */
+
+.mi9-contact-hero-side {
+  min-width: 0;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mi9-contact-globe-card {
+  position: relative;
+  width: 370px;
+  height: 370px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.mi9-contact-globe-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 145px;
+  height: 145px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  color: #ed3237;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.02)
+  );
+  box-shadow:
+    0 0 60px rgba(237, 50, 55, 0.12),
+    inset 0 0 40px rgba(255, 255, 255, 0.03);
+}
+
+.mi9-contact-globe-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.mi9-contact-globe-ring.ring-one {
+  width: 210px;
+  height: 210px;
+}
+
+.mi9-contact-globe-ring.ring-two {
+  width: 290px;
+  height: 180px;
+  transform: translate(-50%, -50%) rotate(28deg);
+}
+
+.mi9-contact-globe-ring.ring-three {
+  width: 290px;
+  height: 180px;
+  transform: translate(-50%, -50%) rotate(-28deg);
+}
+
+.mi9-globe-label {
+  position: absolute;
+  z-index: 3;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(18, 60, 45, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.mi9-globe-label.label-india {
+  left: 5px;
+  top: 175px;
+  color: #ed3237;
+}
+
+.mi9-globe-label.label-india > span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #ed3237;
+  box-shadow: 0 0 0 5px rgba(237, 50, 55, 0.1);
+}
+
+.mi9-globe-label.label-uk {
+  right: 18px;
+  top: 55px;
+}
+
+.mi9-globe-label.label-europe {
+  right: -8px;
+  top: 185px;
+}
+
+.mi9-globe-label.label-gulf {
+  right: 50px;
+  bottom: 43px;
+}
+
+.mi9-globe-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(237, 50, 55, 0.8));
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.mi9-globe-line.line-one {
+  width: 80px;
+  left: 75px;
+  top: 181px;
+}
+
+.mi9-globe-line.line-two {
+  width: 95px;
+  right: 70px;
+  top: 98px;
+  transform: rotate(-28deg);
+}
+
+.mi9-globe-line.line-three {
+  width: 75px;
+  right: 70px;
+  bottom: 94px;
+  transform: rotate(25deg);
+}
+
+/* Responsive hero */
+
+@media (max-width: 1100px) {
+  .mi9-contact-hero .mi9-contact-hero-wrap {
+    gap: 30px;
+  }
+
+  .mi9-contact-globe-card {
+    width: 320px;
+    height: 320px;
+  }
+
+  .mi9-contact-globe-core {
+    width: 125px;
+    height: 125px;
+  }
+
+  .mi9-contact-globe-ring.ring-one {
+    width: 180px;
+    height: 180px;
+  }
+
+  .mi9-contact-globe-ring.ring-two,
+  .mi9-contact-globe-ring.ring-three {
+    width: 245px;
+    height: 155px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mi9-contact-hero {
+    min-height: auto;
+    padding: 90px 0 70px;
+  }
+
+  .mi9-contact-hero .mi9-contact-hero-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .mi9-contact-hero-side {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mi9-contact-hero {
+    padding: 75px 0 55px;
+  }
+
+  .mi9-contact-hero .mi9-contact-hero-content h1 {
+    font-size: 46px;
+  }
+
+  .mi9-contact-hero-content > p {
+    font-size: 14px;
+  }
+
+  .mi9-contact-hero-side {
+    min-height: 300px;
+  }
+
+  .mi9-contact-globe-card {
+    width: 280px;
+    height: 280px;
+  }
+
+  .mi9-contact-globe-core {
+    width: 110px;
+    height: 110px;
+  }
+
+  .mi9-contact-globe-ring.ring-one {
+    width: 155px;
+    height: 155px;
+  }
+
+  .mi9-contact-globe-ring.ring-two,
+  .mi9-contact-globe-ring.ring-three {
+    width: 210px;
+    height: 135px;
+  }
+
+  .mi9-globe-label.label-india {
+    left: -3px;
+    top: 133px;
+  }
+
+  .mi9-globe-label.label-uk {
+    right: 3px;
+    top: 35px;
+  }
+
+  .mi9-globe-label.label-europe {
+    right: -15px;
+    top: 143px;
+  }
+
+  .mi9-globe-label.label-gulf {
+    right: 27px;
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mi9-contact-hero .mi9-contact-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .mi9-contact-hero-pills {
+    gap: 7px;
+  }
+
+  .mi9-contact-hero-pills > span {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+
+  .mi9-contact-globe-card {
+    transform: scale(0.92);
+  }
+}

@@ -1,0 +1,339 @@
+/* ========================================= MI9 INTERNATIONAL PREMIUM GLOBAL CTA ========================================= */
+.mi9-cta {
+  position: relative;
+  isolation: isolate;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #1b5e20;
+} /* ========================================= BACKGROUND IMAGE ========================================= */
+.mi9-cta-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  transform: scale(1.02);
+} /* ========================================= GREEN OVERLAY ========================================= */
+.mi9-cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 55, 20, 0.98) 0%,
+    rgba(20, 78, 28, 0.95) 42%,
+    rgba(27, 94, 32, 0.78) 72%,
+    rgba(27, 94, 32, 0.62) 100%
+  );
+} /* ========================================= BACKGROUND GRID ========================================= */
+.mi9-cta-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: linear-gradient(90deg, black, transparent 85%);
+} /* ========================================= DECORATIVE ORBS ========================================= */
+.mi9-cta-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(1px);
+  z-index: -1;
+}
+.mi9-cta-orb-one {
+  width: 420px;
+  height: 420px;
+  right: -150px;
+  top: -180px;
+  border: 1px solid rgba(231, 185, 60, 0.25);
+  box-shadow:
+    0 0 0 70px rgba(231, 185, 60, 0.025),
+    0 0 0 140px rgba(231, 185, 60, 0.018);
+}
+.mi9-cta-orb-two {
+  width: 240px;
+  height: 240px;
+  left: -120px;
+  bottom: -150px;
+  background: rgba(102, 187, 106, 0.08);
+} /* ========================================= CONTAINER ========================================= */
+.mi9-cta-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+} /* ========================================= MAIN CONTENT ========================================= */
+.mi9-cta-content {
+  max-width: 760px;
+} /* ========================================= EYEBROW ========================================= */
+.mi9-cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 23px;
+  color: #e7b93c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.mi9-cta-eyebrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border: 1px solid rgba(231, 185, 60, 0.45);
+  border-radius: 50%;
+  background: rgba(231, 185, 60, 0.08);
+} /* ========================================= HEADING ========================================= */
+.mi9-cta-content h2 {
+  max-width: 750px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.06;
+  font-weight: 800;
+  letter-spacing: -2.5px;
+}
+.mi9-cta-content h2 span {
+  display: block;
+  margin-top: 7px;
+  color: #e7b93c;
+} /* ========================================= DESCRIPTION ========================================= */
+.mi9-cta-description {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+} /* ========================================= BUTTONS ========================================= */
+.mi9-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 32px;
+}
+.mi9-cta-button {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 19px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+} /* ========================================= PRIMARY BUTTON ========================================= */
+.mi9-cta-primary {
+  min-width: 190px;
+  color: #ffffff;
+  background: #ed3237;
+  border: 1px solid #ed3237;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+.mi9-cta-primary:hover {
+  transform: translateY(-3px);
+  background: #2e7d32;
+  border-color: #2e7d32;
+  box-shadow: 0 17px 35px rgba(0, 0, 0, 0.28);
+} /* Arrow */
+.mi9-cta-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+.mi9-cta-primary:hover .mi9-cta-arrow {
+  transform: translate(3px, -3px);
+  background: rgba(255, 255, 255, 0.25);
+} /* ========================================= SECONDARY BUTTON ========================================= */
+.mi9-cta-secondary {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(12px);
+}
+.mi9-cta-secondary:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.5);
+} /* ========================================= TRUST ROW ========================================= */
+.mi9-cta-trust {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 32px;
+}
+.mi9-cta-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.mi9-cta-trust-item svg {
+  color: #66bb6a;
+}
+.mi9-cta-trust-number {
+  color: #e7b93c;
+  font-size: 14px;
+  font-weight: 800;
+}
+.mi9-cta-trust-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+} /* ========================================= RIGHT SIDE CARD ========================================= */
+.mi9-cta-side {
+  flex-shrink: 0;
+  width: 230px;
+}
+.mi9-cta-side-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+.mi9-cta-side-label {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+.mi9-cta-side-card strong {
+  margin-top: 10px;
+  color: #e7b93c;
+  font-size: 58px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+.mi9-cta-side-text {
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.mi9-cta-side-line {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.15);
+}
+.mi9-cta-side-bottom {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 11px;
+  line-height: 1.5;
+} /* ========================================= TABLET ========================================= */
+@media (max-width: 950px) {
+  .mi9-cta {
+    min-height: 540px;
+  }
+  .mi9-cta-container {
+    gap: 35px;
+  }
+  .mi9-cta-side {
+    width: 190px;
+  }
+  .mi9-cta-side-card {
+    padding: 24px;
+  }
+  .mi9-cta-content h2 {
+    font-size: 48px;
+  }
+} /* ========================================= MOBILE ========================================= */
+@media (max-width: 700px) {
+  .mi9-cta {
+    min-height: auto;
+  }
+  .mi9-cta-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(14, 55, 20, 0.97),
+      rgba(27, 94, 32, 0.88)
+    );
+  }
+  .mi9-cta-container {
+    display: block;
+    padding: 65px 20px;
+  }
+  .mi9-cta-content {
+    max-width: none;
+  }
+  .mi9-cta-content h2 {
+    font-size: 38px;
+    line-height: 1.08;
+    letter-spacing: -1.4px;
+  }
+  .mi9-cta-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .mi9-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .mi9-cta-button {
+    width: 100%;
+  }
+  .mi9-cta-primary {
+    min-width: 0;
+  }
+  .mi9-cta-trust {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .mi9-cta-trust-divider {
+    display: none;
+  }
+  .mi9-cta-side {
+    display: none;
+  }
+} /* ========================================= SMALL MOBILE ========================================= */
+@media (max-width: 420px) {
+  .mi9-cta-container {
+    padding: 55px 18px;
+  }
+  .mi9-cta-content h2 {
+    font-size: 33px;
+  }
+  .mi9-cta-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+  .mi9-cta-trust-item {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,52 @@
+/* =====================================================
+   MI9 CONTACT PAGE - SHARED STYLES
+===================================================== */
+
+.mi9-contact-page {
+  position: relative;
+  width: 100%;
+  padding-top: 120px;
+  overflow: hidden;
+  background: #fffdf7;
+  color: #27352f;
+  font-family: Inter, sans-serif;
+}
+
+.mi9-contact-page,
+.mi9-contact-page *,
+.mi9-contact-page *::before,
+.mi9-contact-page *::after {
+  box-sizing: border-box;
+}
+
+.mi9-contact-page .wrap {
+  position: relative;
+  width: min(1200px, calc(100% - 40px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mi9-contact-page a {
+  color: inherit;
+}
+
+@media (max-width: 650px) {
+  .mi9-contact-page {
+    padding-top: 90px;
+  }
+
+  .mi9-contact-page .wrap {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mi9-contact-page *,
+  .mi9-contact-page *::before,
+  .mi9-contact-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

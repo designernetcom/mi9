@@ -1,0 +1,391 @@
+/* =========================================
+   MI9 INTERNATIONAL
+   MINIMAL PRODUCT LISTING
+========================================= */
+
+.mi9-products-page {
+  --mi9-red: #ed3237;
+  --mi9-green: #123c2d;
+  --mi9-text: #26382f;
+  --mi9-muted: #747c75;
+  --mi9-border: #e7eae5;
+  --mi9-background: #fafbf8;
+
+  overflow: hidden;
+  background: #fff;
+  color: var(--mi9-text);
+}
+
+.mi9-products-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.mi9-products-hero {
+  position: relative;
+  padding: 100px 0 85px;
+  background: var(--mi9-background);
+  text-align: center;
+}
+
+.mi9-products-hero::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 55px;
+  background: var(--mi9-red);
+  content: "";
+  opacity: 0.7;
+}
+
+.mi9-products-hero .mi9-products-container {
+  animation: mi9-products-intro 0.8s ease both;
+}
+
+.mi9-products-eyebrow {
+  display: inline-block;
+  color: var(--mi9-red);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  line-height: 1.8;
+}
+
+.mi9-products-hero h1 {
+  max-width: 850px;
+  margin: 20px auto 18px;
+  color: var(--mi9-green);
+  font-size: clamp(36px, 5.3vw, 65px);
+  font-weight: 750;
+  letter-spacing: -2.4px;
+  line-height: 1.12;
+}
+
+.mi9-products-hero h1 span {
+  color: var(--mi9-red);
+}
+
+.mi9-products-hero p {
+  max-width: 580px;
+  margin: 0 auto;
+  color: var(--mi9-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.mi9-products-hero-line {
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin: 30px auto 0;
+  background: var(--mi9-red);
+}
+
+/* =========================================
+   PRODUCT SECTION
+========================================= */
+
+.mi9-products-section {
+  padding: 140px 0 40px;
+}
+
+.mi9-products-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+.mi9-products-section-heading h2 {
+  margin: 9px 0 0;
+  color: var(--mi9-green);
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+  letter-spacing: -1.3px;
+}
+
+.mi9-products-section-heading > p {
+  max-width: 390px;
+  margin: 0 0 5px;
+  color: var(--mi9-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.mi9-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+
+.mi9-product-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--mi9-border);
+  border-radius: 4px;
+  animation: mi9-product-reveal 0.65s ease both;
+  animation-delay: calc(var(--card-index, 0) * 90ms);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mi9-product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(237, 50, 55, 0.45);
+  box-shadow: 0 15px 35px rgba(18, 60, 45, 0.09);
+}
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.mi9-product-image-link {
+  display: block;
+  overflow: hidden;
+  background: #f3f5ef;
+  text-decoration: none;
+}
+
+.mi9-product-image {
+  position: relative;
+  height: 255px;
+  overflow: hidden;
+}
+
+.mi9-product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.mi9-product-card:hover .mi9-product-image img {
+  transform: scale(1.055);
+}
+
+.mi9-product-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  background: #fff;
+  color: var(--mi9-green);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================
+   PRODUCT TITLE & BUTTON
+========================================= */
+
+.mi9-product-card-content {
+  padding: 22px 20px 20px;
+}
+
+.mi9-product-card-content h3 {
+  margin: 0 0 21px;
+  color: var(--mi9-green);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+}
+
+.mi9-product-button {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 15px;
+  border: 1px solid var(--mi9-green);
+  background: #fff;
+  color: var(--mi9-green);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mi9-product-arrow {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  place-items: center;
+  background: #f8eeee;
+  color: var(--mi9-red);
+  font-size: 16px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.mi9-product-button:hover {
+  border-color: var(--mi9-red);
+  background: var(--mi9-red);
+  color: #fff;
+}
+
+.mi9-product-button:hover .mi9-product-arrow {
+  transform: translate(2px, -2px);
+  background: #fff;
+  color: var(--mi9-red);
+}
+
+.mi9-product-button:focus-visible,
+.mi9-product-image-link:focus-visible {
+  outline: 3px solid var(--mi9-red);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes mi9-products-intro {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mi9-product-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (min-width: 1500px) {
+  .mi9-products-container {
+    width: min(1320px, calc(100% - 80px));
+  }
+
+  .mi9-product-image {
+    height: 290px;
+  }
+}
+
+@media (max-width: 991px) {
+  .mi9-products-hero {
+    padding: 85px 0 70px;
+  }
+
+  .mi9-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 20px;
+  }
+
+  .mi9-product-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 575px) {
+  .mi9-products-container {
+    width: calc(100% - 32px);
+  }
+
+  .mi9-products-hero {
+    padding: 75px 0 55px;
+  }
+
+  .mi9-products-hero h1 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .mi9-products-hero p {
+    font-size: 13px;
+  }
+
+  .mi9-products-section {
+    padding: 45px 0 65px;
+  }
+
+  .mi9-products-section-heading {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .mi9-products-section-heading h2 {
+    font-size: 32px;
+  }
+
+  .mi9-products-section-heading > p {
+    margin-top: 12px;
+  }
+
+  .mi9-products-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .mi9-product-image {
+    height: 260px;
+  }
+
+  .mi9-product-card-content {
+    padding: 20px;
+  }
+
+  .mi9-product-card-content h3 {
+    margin-bottom: 17px;
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mi9-products-hero .mi9-products-container,
+  .mi9-product-card {
+    animation: none;
+  }
+
+  .mi9-product-card,
+  .mi9-product-image img,
+  .mi9-product-button,
+  .mi9-product-arrow {
+    transition: none;
+  }
+
+  .mi9-product-card:hover,
+  .mi9-product-card:hover .mi9-product-image img {
+    transform: none;
+  }
+}

@@ -1,0 +1,19 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.features article,
+.process article {
+  background: white;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #123c2d0d;
+}
+.features svg {
+  color: #c89122;
+}
+.features p {
+  color: #68766f;
+  line-height: 1.6;
+}

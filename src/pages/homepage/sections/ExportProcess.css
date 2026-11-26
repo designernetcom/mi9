@@ -1,0 +1,291 @@
+.export-process {
+  position: relative;
+  padding: 50px 0;
+  background: #fffdf5;
+  overflow: hidden;
+}
+
+.export-process::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: -220px;
+  top: 80px;
+  border-radius: 50%;
+  background: rgba(46, 125, 50, 0.04);
+  pointer-events: none;
+}
+
+.export-process-header {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.export-process-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+
+  color: #2e7d32;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.export-process-eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: #e7b93c;
+}
+
+.export-process-header h2 {
+  margin: 0;
+  color: #1f2933;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.export-process-header h2 strong {
+  display: block;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.export-process-header p {
+  max-width: 600px;
+  margin: 20px auto 0;
+  color: #68736d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* PROCESS */
+
+.export-process-list {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.export-process-list::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: #d9e4d9;
+  z-index: -1;
+}
+
+.export-process-item {
+  text-align: center;
+}
+
+.export-process-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2e7d32;
+  background: #ffffff;
+  border: 1px solid #dce7dc;
+  border-radius: 50%;
+
+  box-shadow:
+    0 8px 25px rgba(31, 41, 51, 0.07),
+    0 0 0 8px #fffdf5;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.export-process-item:hover .export-process-icon {
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 30px rgba(31, 41, 51, 0.1),
+    0 0 0 8px #fffdf5;
+}
+
+.export-process-number {
+  margin-bottom: 10px;
+
+  color: #a8b2aa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.export-process-content {
+  max-width: 190px;
+  margin: 0 auto;
+}
+
+.export-process-content h3 {
+  margin: 0 0 9px;
+  color: #1f2933;
+  font-size: 17px;
+}
+
+.export-process-content p {
+  margin: 0;
+  color: #727b75;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+
+.export-process-footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 65px;
+  padding: 17px 22px;
+
+  border: 1px solid #e2e8e1;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.export-process-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #526058;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.export-process-footer b {
+  color: #e0aa22;
+  font-size: 18px;
+}
+
+.export-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2e7d32;
+  animation: exportPulse 2s infinite;
+}
+
+.export-process-trust {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #68736d;
+  font-size: 12px;
+}
+
+.export-process-trust svg {
+  color: #2e7d32;
+}
+
+@keyframes exportPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.25);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(46, 125, 50, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .export-process {
+    padding: 80px 0;
+  }
+
+  .export-process-list {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+
+  .export-process-list::before {
+    display: none;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .export-process {
+    padding: 70px 0;
+  }
+
+  .export-process-header {
+    margin-bottom: 45px;
+  }
+
+  .export-process-header h2 {
+    font-size: 34px;
+  }
+
+  .export-process-header p {
+    font-size: 14px;
+  }
+
+  .export-process-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .export-process-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 18px;
+    text-align: left;
+  }
+
+  .export-process-icon {
+    grid-row: span 2;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .export-process-number {
+    margin: 3px 0 5px;
+  }
+
+  .export-process-content {
+    max-width: none;
+    margin: 0;
+  }
+
+  .export-process-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 45px;
+  }
+}

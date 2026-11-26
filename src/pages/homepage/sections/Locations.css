@@ -1,0 +1,448 @@
+.global-presence {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0 50px;
+  background: #f7f9f5;
+} /* ========================================= HEADER ========================================= */
+.global-presence-header {
+  position: relative;
+  z-index: 5;
+
+  margin: 0 auto;
+  text-align: center;
+}
+.global-presence-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.global-presence-eyebrow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  background: #2e7d32;
+}
+.global-presence-header h2 {
+  margin: 0;
+  color: #1f2933;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.06;
+  font-weight: 800;
+  letter-spacing: -2.2px;
+}
+.global-presence-header h2 span {
+  display: block;
+  color: #2e7d32;
+}
+.global-presence-header p {
+  max-width: 610px;
+  margin: 22px auto 0;
+  color: #69756d;
+  font-size: 15px;
+  line-height: 1.8;
+} /* ========================================= NETWORK AREA ========================================= */
+.global-network {
+  position: relative;
+  width: 100%;
+  /* max-width: 1100px; */
+  height: 480px;
+  margin: 0 auto 0;
+} /* ========================================= SVG ROUTES ========================================= */
+.global-routes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.route {
+  fill: none;
+  stroke: rgba(46, 125, 50, 0.25);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 7;
+  vector-effect: non-scaling-stroke;
+} /* ========================================= INDIA ORIGIN ========================================= */
+.global-origin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.origin-rings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+}
+.origin-rings > span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(46, 125, 50, 0.18);
+  border-radius: 50%;
+  animation: originPulse 3.5s ease-out infinite;
+}
+.origin-rings > span:nth-child(2) {
+  animation-delay: 1.7s;
+}
+.origin-core {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(145deg, #2e7d32, #1b5e20);
+  box-shadow: 0 15px 35px rgba(27, 94, 32, 0.25);
+}
+.origin-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+.origin-label strong {
+  color: #1f2933;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.origin-label span {
+  margin-top: 3px;
+  color: #8a948d;
+  font-size: 9px;
+} /* ========================================= MARKET POINTS ========================================= */
+.global-market {
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px;
+  min-width: 145px;
+  border: 1px solid rgba(46, 125, 50, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(31, 41, 51, 0.07);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.global-market:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(31, 41, 51, 0.11);
+}
+.market-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  color: #2e7d32;
+  border-radius: 50%;
+  background: #edf6ed;
+}
+.global-market strong {
+  display: block;
+  color: #26332b;
+  font-size: 13px;
+  font-weight: 750;
+}
+.global-market small {
+  display: block;
+  margin-top: 2px;
+  color: #515954;
+  font-size: 10px;
+} /* ========================================= MARKET POSITIONS ========================================= */
+.market-one {
+  top: 42px;
+  left: 7%;
+}
+.market-two {
+  top: 190px;
+  left: 1%;
+}
+.market-three {
+  bottom: 38px;
+  left: 12%;
+}
+.market-four {
+  top: 40px;
+  right: 7%;
+}
+.market-five {
+  top: 190px;
+  right: 1%;
+}
+.market-six {
+  bottom: 38px;
+  right: 12%;
+}
+.market-seven {
+  bottom: 105px;
+  left: 27%;
+}
+.market-eight {
+  bottom: 105px;
+  right: 27%;
+} /* ========================================= TRADE PARTICLES ========================================= */
+.trade-particle {
+  position: absolute;
+  z-index: 4;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e7b93c;
+  box-shadow:
+    0 0 0 4px rgba(231, 185, 60, 0.08),
+    0 0 12px rgba(231, 185, 60, 0.35);
+}
+.particle-one {
+  left: 31%;
+  top: 37%;
+  animation: tradeOne 4s linear infinite;
+}
+.particle-two {
+  left: 46%;
+  top: 31%;
+  animation: tradeTwo 5s linear infinite;
+}
+.particle-three {
+  left: 54%;
+  top: 61%;
+  animation: tradeThree 4.5s linear infinite;
+}
+.particle-four {
+  left: 68%;
+  top: 44%;
+  animation: tradeFour 5.5s linear infinite;
+} /* ========================================= PARTICLE MOTION ========================================= */
+@keyframes tradeOne {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-115px, -65px);
+    opacity: 0;
+  }
+}
+@keyframes tradeTwo {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(145px, -65px);
+    opacity: 0;
+  }
+}
+@keyframes tradeThree {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(130px, 65px);
+    opacity: 0;
+  }
+}
+@keyframes tradeFour {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-125px, 70px);
+    opacity: 0;
+  }
+}
+@keyframes originPulse {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+} /* ========================================= BOTTOM BAR ========================================= */
+.global-presence-footer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 18px 22px;
+  border: 1px solid rgba(46, 125, 50, 0.1);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.05);
+}
+.presence-stat {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #68746c;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.presence-stat strong {
+  color: #2e7d32;
+  font-size: 22px;
+  font-weight: 800;
+}
+.presence-stat svg {
+  color: #2e7d32;
+}
+.presence-stat + .presence-stat {
+  margin-left: 35px;
+  padding-left: 35px;
+  border-left: 1px solid rgba(46, 125, 50, 0.1);
+}
+.presence-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: #2e7d32;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+.presence-link:hover {
+  gap: 10px;
+  color: #1b5e20;
+} /* ========================================= TABLET ========================================= */
+@media (max-width: 900px) {
+  .global-network {
+    height: 520px;
+  }
+  .market-one {
+    left: 2%;
+  }
+  .market-three {
+    left: 3%;
+  }
+  .market-four {
+    right: 2%;
+  }
+  .market-six {
+    right: 3%;
+  }
+  .market-seven {
+    left: 19%;
+  }
+  .market-eight {
+    right: 19%;
+  }
+  .global-presence-footer {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+} /* ========================================= MOBILE ========================================= */
+@media (max-width: 650px) {
+  .global-presence {
+    padding: 75px 0 60px;
+  }
+  .global-presence-header {
+    padding: 0 18px;
+  }
+  .global-presence-header h2 {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+  .global-presence-header p {
+    font-size: 14px;
+  }
+  .global-network {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 45px;
+    padding: 0 18px;
+  }
+  .global-routes,
+  .trade-particle {
+    display: none;
+  }
+  .global-origin {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    grid-column: 1 / -1;
+    margin-bottom: 18px;
+  }
+  .global-market {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    min-width: 0;
+    width: 100%;
+  }
+  .global-presence-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 35px 18px 0;
+    padding: 20px;
+  }
+  .presence-stat + .presence-stat {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .presence-link {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(46, 125, 50, 0.1);
+  }
+}

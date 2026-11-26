@@ -1,0 +1,476 @@
+/* =========================================================
+   ABOUT INTRO / STORY SECTION
+========================================================= */
+
+.about-intro {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+  background: #fffdf5;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 90px;
+}
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.about-intro-visual {
+  position: relative;
+  padding: 20px 20px 45px 0;
+}
+
+.about-image-frame {
+  position: relative;
+  overflow: hidden;
+
+  height: 540px;
+
+  border-radius: 24px;
+
+  background: #eef5ec;
+
+  box-shadow: 0 25px 70px rgba(27, 94, 32, 0.14);
+}
+
+.about-image-frame::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(27, 94, 32, 0.02) 30%,
+    rgba(27, 94, 32, 0.28) 100%
+  );
+}
+
+.aboutImg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.about-intro-visual:hover .aboutImg {
+  transform: scale(1.04);
+  filter: saturate(1.08);
+}
+
+.about-image-overlay {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 45%;
+  height: 45%;
+
+  background: linear-gradient(135deg, transparent, rgba(231, 185, 60, 0.12));
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* =========================================================
+   EXPERIENCE BADGE
+========================================================= */
+
+.about-experience {
+  position: absolute;
+
+  right: -15px;
+  bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-width: 205px;
+
+  padding: 20px 23px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7eee5;
+
+  box-shadow: 0 18px 45px rgba(27, 94, 32, 0.15);
+
+  z-index: 5;
+}
+
+.about-experience-number {
+  color: #ed3237;
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.about-experience-text {
+  display: flex;
+  flex-direction: column;
+
+  color: #667085;
+
+  font-size: 10px;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.about-experience-text strong {
+  color: #1f2933;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+========================================================= */
+
+.about-decor {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+.about-decor-one {
+  top: -5px;
+  left: -28px;
+
+  width: 95px;
+  height: 95px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(231, 185, 60, 0.55);
+}
+
+.about-decor-one::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(46, 125, 50, 0.25);
+}
+
+.about-decor-two {
+  right: -15px;
+  top: 80px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #e7b93c;
+
+  box-shadow: 0 0 0 7px rgba(231, 185, 60, 0.12);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-intro-content {
+  max-width: 620px;
+}
+
+.about-intro-lead {
+  margin: 28px 0 15px;
+
+  color: #344054;
+
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.about-intro-lead strong {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.about-intro-body {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   CHECK LIST
+========================================================= */
+
+.about-checks {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px 20px;
+
+  margin-top: 30px;
+  margin-bottom: 32px;
+}
+
+.about-check {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 42px;
+
+  padding: 8px 10px;
+
+  border: 1px solid #edf1eb;
+  border-radius: 9px;
+
+  background: #fbfdf9;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-check:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(46, 125, 50, 0.2);
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(27, 94, 32, 0.06);
+}
+
+.about-check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: rgba(46, 125, 50, 0.1);
+
+  color: #2e7d32;
+}
+
+/* =========================================================
+   DISCOVER BUTTON
+========================================================= */
+
+.about-discover-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 17px 13px 21px;
+  border-radius: 8px;
+  background: #ed3237;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.2);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-discover-btn:hover {
+  transform: translateY(-3px);
+
+  background: #1b5e20;
+
+  box-shadow: 0 15px 32px rgba(27, 94, 32, 0.25);
+}
+
+.about-discover-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  font-size: 17px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-discover-btn:hover .about-discover-arrow {
+  transform: translateX(4px);
+
+  background: #e7b93c;
+  color: #1b5e20;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .about-intro {
+    padding: 85px 0;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .about-intro-visual {
+    width: min(680px, 100%);
+    margin: 0 auto;
+  }
+
+  .about-intro-content {
+    max-width: 760px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .about-intro {
+    padding: 65px 0;
+  }
+
+  .about-intro-grid {
+    gap: 45px;
+  }
+
+  .about-intro-visual {
+    padding: 10px 10px 40px 0;
+  }
+
+  .about-image-frame {
+    height: 390px;
+
+    border-radius: 18px;
+  }
+
+  .about-experience {
+    right: 0;
+    bottom: 0;
+    min-width: 175px;
+    padding: 15px 17px;
+  }
+  .about-experience-number {
+    font-size: 28px;
+  }
+
+  .about-experience-text {
+    font-size: 9px;
+  }
+
+  .about-experience-text strong {
+    font-size: 10px;
+  }
+
+  .about-decor-one {
+    left: -12px;
+
+    width: 65px;
+    height: 65px;
+  }
+
+  .about-decor-one::after {
+    inset: 9px;
+  }
+
+  .about-intro-lead {
+    margin-top: 22px;
+
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .about-intro-body {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about-checks {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    margin-top: 25px;
+  }
+
+  .about-check {
+    min-height: 44px;
+  }
+
+  .about-discover-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .about-image-frame {
+    height: 330px;
+  }
+
+  .about-intro-lead {
+    font-size: 16px;
+  }
+
+  .about-experience {
+    min-width: 160px;
+  }
+}

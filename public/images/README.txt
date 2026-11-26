@@ -1,0 +1,1 @@
+Place the original MI9-owned image assets in this folder before production launch. Suggested subfolders: logo, hero, products, gallery, certificates and about. Update src/App.jsx image paths after copying files.
