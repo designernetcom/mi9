@@ -47,7 +47,7 @@ $apiKey = 'netcom@123';
 
 $RECAPTCHA_SECRET = '6Lf1ETAuAAAAAFgJRAtmvvIL1DC_JCIkycIdCrkm';
 
-$TO_EMAIL = 'designernetcom@gmail.com';
+$TO_EMAIL = 'mi9international@gmail.com';
 $TO_NAME = 'MI9 International';
 $FROM_NAME = 'MI9 International';
 
